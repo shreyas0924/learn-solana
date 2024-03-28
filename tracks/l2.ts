@@ -10,7 +10,7 @@ const fn1 = async () => {
   const connection = new Connection(clusterApiUrl('devnet'));
   console.log('Connected');
 
-  const address = new PublicKey('GRMD9eYFcFfQ3SY7Ct7ZhYWK3B6kvyGEj2zKcKDuQEf6');
+  const address = new PublicKey('8Q8FgzNxvGd9PfYJgGwHcRLnAaUbqq3riHUAQEXbFZnv');
   console.log(`Address : ${address}`);
   const balance = await connection.getBalance(address);
   console.log(`Balance : ${balance}`);
@@ -50,4 +50,4 @@ const fn3 = async () => {
   console.log(balance / LAMPORTS_PER_SOL);
 };
 
-fn3();
+fn1();
