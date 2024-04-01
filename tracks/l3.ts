@@ -6,8 +6,8 @@ import {
   sendAndConfirmTransaction,
   Keypair,
   PublicKey,
-} from '@solana/web3.js';
-import 'dotenv/config';
+} from "@solana/web3.js";
+import "dotenv/config";
 
 async function f1() {
   let fromPubKey: string = process.argv[2];
@@ -20,12 +20,12 @@ async function f1() {
   const toPubkey = keypair.publicKey;
 
   const connection = new Connection(
-    'https://api.devnet.solana.com',
-    'confirmed'
+    "https://api.devnet.solana.com",
+    "confirmed",
   );
 
   console.log(
-    `✅ Loaded our own keypair, the destination public key, and connected to Solana`
+    `✅ Loaded our own keypair, the destination public key, and connected to Solana`,
   );
 
   const transaction = new Transaction();
@@ -45,7 +45,7 @@ async function f1() {
   ]);
 
   console.log(
-    `💸 Finished! Sent ${LAMPORTS_TO_SEND} to the address ${toPubkey}. `
+    `💸 Finished! Sent ${LAMPORTS_TO_SEND} to the address ${toPubkey}. `,
   );
   console.log(`Transaction signature is ${signature}!`);
 }
